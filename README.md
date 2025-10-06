@@ -2,22 +2,16 @@
 
 [![Build](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml)
 
-An unofficial template project for computer graphics homeworks.
+An unofficial template project for BME VIK Computer Graphics homeworks.
 
 ## Dependencies
 
 - Meson
-- OpenGL dependencies (glfw3, glew, glut, etc...)
+- OpenGL dependencies (`glfw3`, `glew`, `glut`, etc...)
 
 ### Windows
 
-Follow the Meson [guide](https://mesonbuild.com/Getting-meson.html) on how to download and get started with Meson. You can use pip to install it, like so:
-
-```bash
-pip3 install --user meson
-```
-
-or simply download the MSI from their latest [releases](https://github.com/mesonbuild/meson/releases) page.
+Follow the Meson [guide](https://mesonbuild.com/Getting-meson.html) on how to download and get started with Meson, or simply download the MSI from their latest [releases](https://github.com/mesonbuild/meson/releases) page.
 
 ### Ubuntu
 
@@ -51,7 +45,9 @@ To get more familiar with Meson, you can read the [manual](https://mesonbuild.co
 
 ## Notes
 
-As the semesters go on, new versions of `framework.cpp` and `framework.h` may be released, or the framework may change entirely, and require seperate dependencies. If you notice any discrepancies, please send a pull request.
+### Outdated framework
+
+As the semesters go on, new versions of `framework.cpp` and `framework.h` may be released, or the framework may change entirely, and require seperate dependencies. If you notice any discrepancies, please open an issue.
 
 ### MSVC quirks
 
