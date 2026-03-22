@@ -1,8 +1,14 @@
 # grafika-hf-template
 
-[![Build](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml)
+<div align="center">
+    <picture>
+        <img src="./green_triangle.png" width="50%" alt="An unofficial template project for BME VIK Computer Graphics homeworks">
+    </picture>
 
-An unofficial template project for BME VIK Computer Graphics homeworks.
+An unofficial template project for BME VIK Computer Graphics homeworks
+</div>
+
+[![Build](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/levy04/grafika-hf-template/actions/workflows/ci.yml)
 
 ## Dependencies
 
