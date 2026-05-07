@@ -12,9 +12,6 @@ An unofficial template project for BME VIK Computer Graphics homeworks
 
 ## Dependencies
 
-- Meson
-- OpenGL dependencies (`glfw3`, `glew`, `glut`, etc...)
-
 ### Windows
 
 Follow the Meson [guide](https://mesonbuild.com/Getting-meson.html) on how to download and get started with Meson, or simply download the MSI from their latest [releases](https://github.com/mesonbuild/meson/releases) page.
@@ -24,9 +21,7 @@ Follow the Meson [guide](https://mesonbuild.com/Getting-meson.html) on how to do
 Run the following command to get the dependencies.
 
 ```bash
-sudo apt-get update && sudo apt-get install -y mesa-utils libgl1-mesa-dev \
-libglu1-mesa-dev libglm-dev freeglut3-dev libglew-dev libglfw3-dev \
-python3 ninja-build meson
+sudo apt-get update && sudo apt-get install -y python3 ninja-build meson
 ```
 
 ### MacOS
@@ -34,7 +29,7 @@ python3 ninja-build meson
 Run the following command to get the dependencies.
 
 ```bash
-brew install mesa-glu glm glew glfw meson
+brew install meson
 ```
 
 ## Usage
@@ -43,9 +38,9 @@ First, use this project as a template to get your own repository. Make sure to m
 
 Make sure to write all your code in the `src.cpp` file, since JPorta is setup such that only one file is submittable. 
 
-Set your project up with the `meson setup build` command, after which you can compile your code with `meson compile -C build`. This will generate an executable located at `./build/out`. After initial project setup, you can recompile any time with `meson compile -C build` or `ninja -C build`. If you want a clean build, issuing `meson setup --wipe build` will regenerate the build directory.
+Set your project up with the `meson build` command, after which you can compile your code with `meson compile -C build`. This will generate an executable located at `./build/out`. After initial project setup, you can recompile any time with `meson compile -C build` or `ninja -C build`. If you want a clean build, issuing `meson build --wipe` will regenerate the build directory.
 
-If you are using Visual Studio Code, there is an included `launch.json` and `tasks.json` to automate the compiling process, usually pressing `F5` will work on most setups. You will still need to initially run `meson setup build`.
+If you are using Visual Studio Code, there is an included `launch.json` and `tasks.json` to automate the compiling process, usually pressing `F5` will work on most setups. You will still need to initially run `meson build`.
 
 To get more familiar with Meson, you can read the [manual](https://mesonbuild.com/Manual.html), or look at some [samples](https://mesonbuild.com/Meson-sample.html).
 

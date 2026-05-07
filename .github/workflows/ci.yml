@@ -16,7 +16,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          # - windows-latest
+          - windows-latest
           - macos-latest
     runs-on: ${{ matrix.os }}
     
@@ -27,13 +27,12 @@ jobs:
       - name: Install Meson and Ninja
         run: pip install meson ninja
         
-      - name: Install OpenGL dependencies (Linux)
+      - name: Install graphics dependencies
         if: matrix.os == 'ubuntu-latest'
-        run: sudo apt-get update && sudo apt-get install -y mesa-utils libgl1-mesa-dev libglu1-mesa-dev libglm-dev freeglut3-dev libglew-dev libglfw3-dev
+        run: |
+             sudo apt-get update
+             sudo apt-get install -y libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev \
+             libxi-dev libxext-dev libwayland-dev libxkbcommon-dev wayland-protocols
 
-      - name: Install OpenGL dependencies (Mac)
-        if: matrix.os == 'macos-latest'
-        run: brew install mesa-glu glm glew glfw
-      
       - name: Compile with Meson
         run: meson setup build && meson compile -C build

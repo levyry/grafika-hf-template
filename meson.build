@@ -5,12 +5,8 @@ add_project_arguments('-Wall', '-Wextra', '-pedantic', '-D_HAS_CXX17=1', languag
 
 # Dependencies
 deps = [
-    dependency('gl', required: true),
-    dependency('glm', required: true),
-    dependency('glu', required: true),
-    dependency('glut', required: true),
-    dependency('glew', required: true),
-    dependency('glfw3', required: true)
+    dependency('glm', fallback: ['glm', 'glm_dep'], required: true),
+    dependency('glfw3', fallback: ['glfw', 'glfw_dep'], required: true)
 ]
 
 # External Libraries
@@ -22,7 +18,6 @@ libs = [
 # Source files
 srcs = files(
     'src.cpp',
-    'framework.h',
     'framework.cpp'
 )
 
